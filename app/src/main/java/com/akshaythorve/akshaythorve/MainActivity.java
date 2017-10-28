@@ -7,7 +7,12 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class MainActivity extends AppCompatActivity {
+
+    private AdView mAdView;
 
     WebView webview;
 
@@ -32,5 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
         webview.setWebViewClient(new WebViewClient());
         webview.loadUrl("https://spark.adobe.com/page/X2h9HzkliZrJA/");
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 }
