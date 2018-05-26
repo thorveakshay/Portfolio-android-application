@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
 
         webview.setWebViewClient(new WebViewClient());
-        webview.loadUrl("https://spark.adobe.com/page/X2h9HzkliZrJA/");
+        webview.loadUrl("https://akshaythorve.com/");
 
         mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
